@@ -1,0 +1,77 @@
+{
+  "project": {
+    "name": "Cognitive AI Studio",
+    "vision": "Platform AI percakapan multi-agen dengan streaming response dan perpustakaan prompt kustom",
+    "audiences": [
+      "Content Creators",
+      "Software Developers",
+      "AI Researchers"
+    ],
+    "coreFeatures": [
+      "Streaming AI Chat",
+      "Conversation Threads",
+      "Prompt Library",
+      "Usage and Cost Metrics",
+      "Model Parameter Settings",
+      "Export and Public Sharing"
+    ]
+  },
+  "uxDecisions": [
+    {
+      "id": "ux-evidence-first",
+      "name": "Evidence-first chat",
+      "informedBy": [
+        "Perplexity: Inline numbered citations",
+        "Claude: Search activity indicator",
+        "Claude: Explicit web-search control"
+      ],
+      "requires": [
+        "UI State: source-loading",
+        "UI State: source-success",
+        "UI State: source-error",
+        "Accessible citations with keyboard and screen reader support"
+      ]
+    },
+    {
+      "id": "ux-research-progress",
+      "name": "Research progress visibility",
+      "requires": [
+        "State: thinking",
+        "State: searching",
+        "State: reading_sources",
+        "State: generating",
+        "Action: cancel_generation",
+        "Accessibility: aria-live status announcement"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-perplexity-how",
+      "title": "How does Perplexity work?",
+      "url": "https://www.perplexity.ai/help-center/en/articles/10352895-how-does-perplexity-work",
+      "type": "help-center",
+      "vendor": "Perplexity"
+    },
+    {
+      "id": "src-claude-web-search",
+      "title": "Enable and use web search",
+      "url": "https://support.claude.com/en/articles/10684626-enable-and-use-web-search",
+      "type": "help-center",
+      "vendor": "Claude"
+    },
+    {
+      "id": "src-claude-research",
+      "title": "Use research on Claude",
+      "url": "https://support.claude.com/en/articles/11088861-use-research-on-claude",
+      "type": "help-center",
+      "vendor": "Claude"
+    },
+    {
+      "id": "src-masterprompt",
+      "title": "MASTERPROMPT.md",
+      "path": "MASTERPROMPT.md",
+      "type": "project-document"
+    }
+  ]
+}
